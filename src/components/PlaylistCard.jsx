@@ -2,8 +2,9 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FiX } from "react-icons/fi";
+const apiKey = import.meta.env.VITE_API_KEY; 
 
-const API_KEY = "AIzaSyBGxo8EQxfg5woIMCaqynpMHtsIEuie-5A"; // Replace with your valid YouTube Data API key
+const API_KEY = apiKey; 
 
 function getPlaylistId(url) {
   const regExp = /[?&]list=([^&]+)/;
