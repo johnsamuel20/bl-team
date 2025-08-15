@@ -1,54 +1,81 @@
-import React, { useState } from "react";
+/* eslint-disable no-unused-vars */
+import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FiX } from "react-icons/fi";
 
-function getYouTubeId(url) {
-  const regExp = /(?:youtu\.be\/|v=)([^&?/]+)/;
+const API_KEY = "AIzaSyBGxo8EQxfg5woIMCaqynpMHtsIEuie-5A"; // Replace with your valid YouTube Data API key
+
+function getPlaylistId(url) {
+  const regExp = /[?&]list=([^&]+)/;
   const match = url.match(regExp);
   return match ? match[1] : null;
 }
 
 function PlaylistCard({ p }) {
   const [openEmbed, setOpenEmbed] = useState(false);
+  const [videos, setVideos] = useState([]);
+  const [playlistImage, setPlaylistImage] = useState(null);
+  const playlistId = getPlaylistId(p.playlistHref);
 
-  const videoId = getYouTubeId(p.playlistHref);
+  // Fetch playlist videos when popup opens
+  useEffect(() => {
+    if (openEmbed && playlistId) {
+      fetch(
+        `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=50&playlistId=${playlistId}&key=${API_KEY}`
+      )
+        .then((res) => res.json())
+        .then((data) => {
+          setVideos(data.items || []);
+        })
+        .catch((err) => console.error(err));
+    }
+  }, [openEmbed, playlistId]);
+
+  // Fetch first video thumbnail for background
+  useEffect(() => {
+    if (playlistId) {
+      fetch(
+        `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=1&playlistId=${playlistId}&key=${API_KEY}`
+      )
+        .then((res) => res.json())
+        .then((data) => {
+          if (data.items && data.items.length > 0) {
+            setPlaylistImage(data.items[0].snippet.thumbnails.high.url);
+          }
+        })
+        .catch((err) => console.error(err));
+    }
+  }, [playlistId]);
 
   return (
     <>
-      {/* Playlist Card */}
+      {/* Card */}
       <motion.div
-        className="flex-shrink-0 w-44 h-44 rounded-xl overflow-hidden relative 
-            border border-gray-200 shadow-lg cursor-pointer group"
-        whileHover={{ rotate: 0 }}
+        className="flex-shrink-0 w-44 h-44 rounded-xl overflow-hidden relative border border-gray-200 shadow-lg cursor-pointer group bg-cover bg-center "
+        style={{
+          backgroundImage: `url(${playlistImage || p.logo})`,
+          backgroundSize: "178%", // zoomed in
+          backgroundPosition: "center",
+        }}
         onClick={() => setOpenEmbed(true)}
       >
-        {/* Background image layer */}
-        <div
-          className="absolute inset-0 bg-cover bg-center scale-140"
-          style={{
-            backgroundImage: `url(https://i.ytimg.com/vi/${videoId}/hqdefault.jpg)`,
-            filter: "brightness(60%)" 
-          }}
-        />
-
-        {/* Logo overlay */}
-        <div className="absolute left-3 top-3 bg-white p-1 rounded-lg shadow">
+        <div className="absolute inset-0 bg-black/30 pointer-events-none"></div>
+        {/* Logo top-left */}
+        <div className="absolute top-2 left-2 bg-white/80 rounded-lg p-1 shadow">
           <img
             src={p.logo}
-            alt={`${p.title} logo`}
+            alt={p.title}
             className="w-10 h-10 object-contain"
           />
         </div>
+        
 
-        {/* Title gradient */}
-        <div
-          className="absolute bottom-0 left-0 right-0 p-3 
-                  bg-gradient-to-t from-black/60 to-transparent 
-                  text-white text-sm font-semibold 
-                  group-hover:from-black/80 transition-colors"
-        >
+        {/* Gradient & Title bottom */}
+        <div className="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black/60 to-transparent text-white text-sm font-semibold">
           {p.title}
         </div>
+
+        {/* Play button center */}
         <div className="absolute inset-0 flex items-center justify-center">
           <div
             className="w-12 h-12 bg-white/90 rounded-full flex items-center justify-center 
@@ -66,7 +93,7 @@ function PlaylistCard({ p }) {
         </div>
       </motion.div>
 
-      {/* Modal with YouTube embed */}
+      {/* Popup */}
       <AnimatePresence>
         {openEmbed && (
           <motion.div
@@ -76,29 +103,49 @@ function PlaylistCard({ p }) {
             exit={{ opacity: 0 }}
           >
             <motion.div
-              className="bg-white rounded-xl overflow-hidden shadow-lg w-full max-w-2xl relative"
+              className="bg-white rounded-xl overflow-hidden shadow-lg w-full max-w-5xl h-[80vh] relative flex flex-col"
               initial={{ scale: 0.8 }}
               animate={{ scale: 1 }}
               exit={{ scale: 0.8 }}
             >
-              {/* Close button */}
               <button
                 onClick={() => setOpenEmbed(false)}
-                className="absolute top-2 right-2 p-2 rounded-full bg-white shadow hover:bg-gray-100"
+                className="absolute top-2 right-2 p-2 rounded-full bg-white shadow hover:bg-gray-100 z-10"
               >
                 <FiX size={20} />
               </button>
 
-              {/* YouTube Playlist Embed */}
-              <iframe
-                width="100%"
-                height="400"
-                src={`https://www.youtube.com/embed/${videoId}`}
-                title={p.title}
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              />
+              <div className="p-4 overflow-y-auto flex-1">
+                {videos.map((v) => {
+                  const videoId = v.snippet.resourceId.videoId;
+                  return (
+                    <div
+                      key={videoId}
+                      className="flex items-start gap-3 mb-4 cursor-pointer hover:bg-gray-100 p-2 rounded-lg"
+                      onClick={() =>
+                        window.open(
+                          `https://www.youtube.com/watch?v=${videoId}`,
+                          "_blank"
+                        )
+                      }
+                    >
+                      <img
+                        src={v.snippet.thumbnails.medium.url}
+                        alt={v.snippet.title}
+                        className="w-40 md:w-48 h-24 md:h-28 object-cover rounded-lg flex-shrink-0"
+                      />
+                      <div className="flex-1 min-w-0">
+                        <div className="font-semibold text-sm md:text-base leading-snug line-clamp-2">
+                          {v.snippet.title}
+                        </div>
+                        <div className="text-xs md:text-sm text-gray-500 mt-1">
+                          {v.snippet.channelTitle}
+                        </div>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
             </motion.div>
           </motion.div>
         )}

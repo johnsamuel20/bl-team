@@ -1,37 +1,44 @@
-import React, { useState } from 'react';
-import HeaderSection from "./page/header" 
-import Section1 from "./page/section1" 
-import Section2 from "./page/section2" 
-import Section3 from "./page/section3" 
-import Modal from "./components/Modal" 
-
+import React, { useState } from "react";
+import HeaderSection from "./page/header";
+import Section1 from "./page/section1";
+import Section2 from "./page/section2";
+import Section3 from "./page/section3";
+import Modal from "./components/Modal";
+import FadeInSection from "./components/FadeIn";
 
 export default function App() {
   const [openItem, setOpenItem] = useState(null);
 
   function handleOpen(item) {
-    // If item's type is link, we open modal to allow opening externally or directly navigate
     setOpenItem(item);
   }
-  function handleClose() { setOpenItem(null); }
+  function handleClose() {
+    setOpenItem(null);
+  }
 
   return (
-<div className="min-h-screen bg-gradient-to-b from-[#FFF8E7] to-white text-[#002E5D] antialiased">
-  <div className="max-w-md mx-auto px-4 pt-6 pb-24">
-    <HeaderSection />
+    <div className="min-h-screen bg-gradient-to-b from-[#FFF8E7] to-white text-[#002E5D] antialiased">
+      <div className="max-w-md md:max-w-4xl lg:max-w-6xl mx-auto px-4 md:px-8 lg:px-12 pt-6 pb-24 md:pt-10 lg:pt-16">
+        <HeaderSection />
 
-    {/* Section 1: grid cards */}
-    <Section1 handleOpen={handleOpen} />
+        <FadeInSection>
+          <Section1 handleOpen={handleOpen} />
+        </FadeInSection>
 
-    {/* Section 2: Song Channels / Program Channels */}
-    <Section2 />
+        <FadeInSection delay={0.1}>
+          <div className="mt-6 md:mt-10">
+            <Section2 />
+          </div>
+        </FadeInSection>
 
-    {/* Section 3: Social & streaming */}
-    <Section3 />
-  </div>
+        <FadeInSection delay={0.2}>
+          <div className="mt-6 md:mt-10">
+            <Section3 />
+          </div>
+        </FadeInSection>
+      </div>
 
-  <Modal openItem={openItem} onClose={handleClose} />
-</div>
-
+      <Modal openItem={openItem} onClose={handleClose} />
+    </div>
   );
 }

@@ -1,15 +1,20 @@
-import React from 'react'
+import React from 'react';
 import PlaylistCard from './PlaylistCard';
-
 
 function HorizontalRow({ title, items }) {
   return (
-    <section className="mt-6">
-      <div className="flex items-center justify-between px-2">
-        <h3 className="text-base font-semibold">{title}</h3>
-        {/* <a className="text-xs text-blue-600" href="#">See all</a> */}
+    <section>
+      <div className="flex items-center justify-between px-2 md:px-0">
+        {title && <h3 className="text-base md:text-lg font-semibold">{title}</h3>}
+        {/* Optional see all link */}
       </div>
-      <div className="mt-3 flex gap-3 overflow-x-auto px-2 pb-2">
+
+      {/* Mobile: horizontal scroll, Desktop: grid */}
+      <div
+        className="
+mt-3 flex gap-3 overflow-x-auto px-2 pb-2
+        "
+      >
         {items.map((p) => (
           <PlaylistCard key={p.id} p={p} />
         ))}
@@ -18,4 +23,4 @@ function HorizontalRow({ title, items }) {
   );
 }
 
-export default HorizontalRow
+export default HorizontalRow;

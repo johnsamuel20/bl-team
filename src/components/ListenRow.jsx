@@ -1,11 +1,11 @@
 import React from "react";
 
-function SocialRow({ items, title }) {
+function ListenRow({ items }) {
   return (
     <div className="mt-6 px-4 pb-8">
       {/* Title */}
       <div className="text-sm font-semibold mb-4 text-gray-700 tracking-wide">
-        {title}
+        Listen
       </div>
 
       {/* Grid */}
@@ -38,4 +38,4 @@ function SocialRow({ items, title }) {
   );
 }
 
-export default SocialRow;
+export default ListenRow;

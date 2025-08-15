@@ -1,54 +1,266 @@
-import tamam from "../assets/social media/tamam tv logo.png"
-import BlWorship from "../assets/social media/BL Worship logo.png"
-import BlVideo from "../assets/social media/blv logo.png"
-import BlLogo from "../assets/social media/BL logo.png"
-import BlKids from "../assets/social media/kids logo.png"
+import tamam from "../assets/social media/tamam tv logo.png";
+import BlWorship from "../assets/social media/BL Worship logo.png";
+import BlVideo from "../assets/social media/blv logo.png";
+import BlLogo from "../assets/social media/BL logo.png";
+import BlKids from "../assets/social media/kids logo.png";
+import BlRise from "../assets/social media/rise logo.png";
+import BlDiBenty from "../assets/social media/di benty logo.png";
 
-import Facebook from "../assets/SM-Music Icons/facebook-logo-png-blue.png"
-import Instagram from "../assets/SM-Music Icons/Instagram_icon.png.webp"
-import Tiktok from "../assets/SM-Music Icons/tiktok.png"
+import BibleApp from "../assets/apps/Bible app.png";
+import BlRadio from "../assets/apps/BL Radio logo.png";
+import BlKidsApp from "../assets/apps/kids logo.png";
+import Mahaba from "../assets/apps/mahaba logo.png";
+import Ranem from "../assets/apps/ranem black@4x-8.png";
+import YouthBible from "../assets/apps/youth bible logo.png";
+import Noury from "../assets/websites/Nouri/noury arabic logo@4x.png";
 
+import { FaFacebook, FaInstagram, FaTiktok } from "react-icons/fa";
 
-
-import AppleMusic from "../assets/SM-Music Icons/Apple_Music_icon.svg.png"
-import Spotify from "../assets/SM-Music Icons/Spotify_logo_without_text.svg.webp"
-import Anghami from "../assets/SM-Music Icons/anghami.png"
-import SoundCloud from "../assets/SM-Music Icons/soundcloud.png"
-
+import AppleMusic from "../assets/SM-Music Icons/Apple_Music_icon.svg.png";
+import Spotify from "../assets/SM-Music Icons/Spotify_logo_without_text.svg.webp";
+import Anghami from "../assets/SM-Music Icons/anghami.png";
+import SoundCloud from "../assets/SM-Music Icons/soundcloud.png";
 
 // Section 1
 export const section1Cards = [
-  { id: 'bible-app', title: 'Bible App', type: 'link', href: 'https://example.com/bible', color: '#1E3A8A' }, // deep blue
-  { id: 'bible-youth', title: 'Bible App Youth', type: 'link', href: 'https://example.com/bible-youth', color: '#FBBF24' }, // soft gold
-  { id: 'noury-ai', title: 'Noury AI', type: 'link', href: 'https://example.com/noury', color: '#38BDF8' }, // sky blue
-  { id: 'bl-radio', title: 'BL Radio', type: 'link', href: 'https://example.com/bl-radio', color: '#0E7490' }, // teal
-  { id: 'mahaba-radio', title: 'Mahaba Radio', type: 'link', href: 'https://example.com/mahaba', color: '#F59E0B' }, // warm amber
-  { id: 'rannem', title: 'Rannem - Kids App', type: 'link', href: 'https://example.com/rannem', color: '#EC4899' } // playful pink
+  {
+    id: "bible-app",
+    title: "Bible App",
+    type: "link",
+    hrefAndroid:
+      "https://play.google.com/store/apps/details?id=com.vci.ketabyelmokadas&hl=ar",
+    hrefIOS:
+      "https://apps.apple.com/eg/app/%D9%83%D8%AA%D8%A7%D8%A8%D9%8A-%D8%A7%D9%84%D9%85%D9%82%D8%AF%D8%B3/id6478341868",
+    logo: BibleApp,
+    color: "#ffff",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+  }, // deep blue
+  {
+    id: "bible-youth",
+    title: "Bible App Youth",
+    type: "link",
+    hrefAndroid:
+      "https://play.google.com/store/apps/details?id=com.vci.ketabyelmokadas&hl=ar",
+    hrefIOS:
+      "https://apps.apple.com/eg/app/%D9%83%D8%AA%D8%A7%D8%A8%D9%8A-%D8%A7%D9%84%D9%85%D9%82%D8%AF%D8%B3/id6478341868",
+    logo: YouthBible,
+    color: "#ffff",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+  }, // soft gold
+  {
+    id: "noury-ai",
+    title: "Noury AI",
+    type: "link",
+    hrefAndroid:
+      "https://play.google.com/store/apps/details?id=com.vci.ketabyelmokadas&hl=ar",
+    hrefIOS:
+      "https://apps.apple.com/eg/app/%D9%83%D8%AA%D8%A7%D8%A8%D9%8A-%D8%A7%D9%84%D9%85%D9%82%D8%AF%D8%B3/id6478341868",
+    logo: Noury,
+    color: "#ffff",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+  }, // sky blue
+  {
+    id: "bl-radio",
+    title: "BL Radio",
+    type: "link",
+    hrefAndroid:
+      "https://play.google.com/store/apps/details?id=com.extremesolution.betterlife&hl=en",
+    hrefIOS:
+      "https://apps.apple.com/eg/app/better-life-app/id779830805",
+    logo: BlRadio,
+    color: "#ffff",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+  }, // teal
+  {
+    id: "mahaba-radio",
+    title: "Mahaba Radio",
+    type: "link",
+    hrefAndroid:
+      "https://play.google.com/store/apps/details?id=com.vci.ketabyelmokadas&hl=ar",
+    hrefIOS:
+      "https://apps.apple.com/eg/app/%D9%83%D8%AA%D8%A7%D8%A8%D9%8A-%D8%A7%D9%84%D9%85%D9%82%D8%AF%D8%B3/id6478341868",
+    logo: Mahaba,
+    color: "#ffff",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+  }, // warm amber
+  {
+    id: "rannem",
+    title: "Rannem",
+    type: "link",
+    hrefAndroid:
+      "https://play.google.com/store/apps/details?id=com.vci.ketabyelmokadas&hl=ar",
+    hrefIOS:
+      "https://apps.apple.com/eg/app/%D9%83%D8%AA%D8%A7%D8%A8%D9%8A-%D8%A7%D9%84%D9%85%D9%82%D8%AF%D8%B3/id6478341868",
+    logo: Ranem,
+    color: "#ffff",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+  }, // playful pink
+  {
+    id: "kids-app",
+    title: "Kids App",
+    type: "link",
+    hrefAndroid:
+      "https://play.google.com/store/apps/details?id=com.vci.ketabyelmokadas&hl=ar",
+    hrefIOS:
+      "https://apps.apple.com/eg/app/%D9%83%D8%AA%D8%A7%D8%A8%D9%8A-%D8%A7%D9%84%D9%85%D9%82%D8%AF%D8%B3/id6478341868",
+    logo: BlKidsApp,
+    color: "#ffff",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+  }, // playful pink
 ];
 
 // Section 2
 export const songChannels = [
-  { id: 'betterlife', title: 'Better Life', logo: BlLogo, playlistHref: 'https://youtu.be/ozvEBNK2B30?si=MC0jchkWQzB9wfs3' },
-  { id: 'bl-worship', title: 'BL Worship', logo: BlWorship, playlistHref: 'https://youtu.be/so3eaGgAX6Q?si=7qjJi_LjFFqA3ELa' },
-  { id: 'bl-kids', title: 'BL Kids', logo: BlKids, playlistHref: 'https://youtu.be/pwx79UrBD6Q?si=ihhVbAMHPoXH6w5_' }
+  {
+    id: "betterlife",
+    title: "Better Life",
+    logo: BlLogo,
+    playlistHref:
+      "https://youtube.com/playlist?list=PLMncR0UTSkZuWdDYqkITtzXb6NdhnLbbP&si=FPOYhrQ8fevzxzj9",
+  },
+  {
+    id: "bl-worship",
+    title: "BL Worship",
+    logo: BlWorship,
+    playlistHref:
+      "https://youtube.com/playlist?list=PLS0YnR_Q10gTsPmj5J4HBv7ZeZ-GHEWMa&si=y2hFdyMQnjmswj6G",
+  },
+  {
+    id: "bl-kids",
+    title: "BL Kids",
+    logo: BlKids,
+    playlistHref:
+      "https://youtube.com/playlist?list=PLhnvx-RQ-qG7gRvVcurpbtfgw20kPkCwh&si=QW3NPfYEBS-A4K36",
+  },
 ];
 
 export const programChannels = [
-  { id: 'bl-videos', title: 'BL Videos', logo: BlVideo, playlistHref: 'https://youtu.be/TOU2lF4Hmd0?si=x8TLD05q0ZjW952X' },
-  { id: 'tamamtv', title: 'TamamTV', logo: tamam, playlistHref: 'https://youtu.be/x8pGpoX2eVc?si=LQsHDhbwDWL5mrLK' }
+  {
+    id: "bl-videos",
+    title: "BL Videos",
+    logo: BlVideo,
+    playlistHref:
+      "https://youtube.com/playlist?list=PLz8da-JpheFsykmBf5B8i-qt1xifTK9ki&si=iCkJawVathgsAPRW",
+  },
+  {
+    id: "tamamtv",
+    title: "TamamTV",
+    logo: tamam,
+    playlistHref:
+      "https://youtube.com/playlist?list=PLypE_LvQnbkHG3V7pBhqOW2WTVma_a73k&si=NrdnV_5fbokGk1ys",
+  },
 ];
 
 // Section 3
 export const socialLinks = [
-  { id: 'facebook', title: 'Facebook', icon: Facebook, href: 'https://www.facebook.com/betterlife/' },
-  { id: 'instagram', title: 'Instagram', icon: Instagram, href: 'https://www.instagram.com/betterlife.team/' },
-  { id: 'tiktok', title: 'Tiktok', icon: Tiktok, href: 'https://www.tiktok.com/channel/better-life?lang=en' },
-  // { id: 'meshwary', title: 'Meshwary', icon: 'site', href: 'https://meshwary.example' },
-  // { id: 'timeless', title: 'Timeless Truth', icon: 'site', href: 'https://timelesstruth.example' }
+  {
+    id: "facebook",
+    title: "Facebook",
+    icon: FaFacebook,
+    color: "bg-blue-600",
+    pages: [
+      {
+        name: "BetterLife Team",
+        href: "https://www.facebook.com/betterlife/",
+        logo: BlLogo,
+      },
+      {
+        name: "BetterLife Rise",
+        href: "https://www.facebook.com/BetterLifeShabab",
+        logo: BlRise,
+      },
+      {
+        name: "BetterLife Dibenty",
+        href: "https://www.facebook.com/DiBenty",
+        logo: BlDiBenty,
+      },
+      {
+        name: "BetterLife Kids",
+        href: "https://www.facebook.com/BetterLifeKids",
+        logo: BlKids,
+      },
+    ],
+  },
+  {
+    id: "instagram",
+    title: "Instagram",
+    icon: FaInstagram,
+    color: "bg-pink-500",
+    pages: [
+      {
+        name: "BetterLife Team",
+        href: "https://www.instagram.com/betterlife.team/",
+        logo: BlLogo,
+      },
+      {
+        name: "BetterLife Rise",
+        href: "https://www.instagram.com/betterliferise/",
+        logo: BlRise,
+      },
+      {
+        name: "BetterLife Dibenty",
+        href: "https://www.instagram.com/betterlifeforher/",
+        logo: BlDiBenty,
+      },
+      {
+        name: "BetterLife Kids",
+        href: "https://www.instagram.com/kidsbetterlife/",
+        logo: BlKids,
+      },
+    ],
+  },
+  {
+    id: "tiktok",
+    title: "TikTok",
+    icon: FaTiktok,
+    color: "bg-black",
+    pages: [
+      {
+        name: "BetterLife Team",
+        href: "https://www.tiktok.com/@betterlife.team",
+        logo: BlLogo,
+      },
+      {
+        name: "BetterLife Rise",
+        href: "https://www.tiktok.com/@betterliferise",
+        logo: BlRise,
+      },
+      {
+        name: "BetterLife Dibenty",
+        href: "https://www.tiktok.com/@betterlifedibenty",
+        logo: BlDiBenty,
+      },
+      {
+        name: "BetterLife Kids",
+        href: "https://www.tiktok.com/@betterlifekids",
+        logo: BlKids,
+      },
+    ],
+  },
 ];
 export const musicLinks = [
-  { id: 'apple', title: 'Apple Music', icon: AppleMusic, href: 'https://music.apple.com/us/artist/better-life/319157542' },
-  { id: 'spotify', title: 'Spotify', icon: Spotify, href: 'https://open.spotify.com/artist/3VtbwbYtXFE00DyRtKJNUa?si=aDTLZoqrT0mvdJaJ6uP7gA' },
-  { id: 'anghami', title: 'Anghami', icon: Anghami, href: 'https://play.anghami.com/artist/1930524' },
-  { id: 'soundcloud', title: 'SoundCloud', icon: SoundCloud, href: 'https://soundcloud.com/better-life-733580510' },
+  {
+    id: "spotify",
+    title: "Spotify",
+    icon: Spotify,
+    href: "https://open.spotify.com/artist/3VtbwbYtXFE00DyRtKJNUa?si=aDTLZoqrT0mvdJaJ6uP7gA",
+  },
+  {
+    id: "anghami",
+    title: "Anghami",
+    icon: Anghami,
+    href: "https://play.anghami.com/artist/1930524",
+  },
+  {
+    id: "soundcloud",
+    title: "SoundCloud",
+    icon: SoundCloud,
+    href: "https://soundcloud.com/better-life-733580510",
+  },
+  {
+    id: "apple",
+    title: "Apple Music",
+    icon: AppleMusic,
+    href: "https://music.apple.com/us/artist/better-life/319157542",
+  },
 ];
