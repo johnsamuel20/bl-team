@@ -10,7 +10,7 @@ import BibleApp from "../assets/apps/Bible app.png";
 import BlRadio from "../assets/apps/BL Radio logo.png";
 import BlKidsApp from "../assets/apps/kids logo.png";
 import Mahaba from "../assets/apps/mahaba logo.png";
-import Ranem from "../assets/apps/ranem black@4x-8.png";
+import Ranem from "../assets/apps/ranem white@4x-8.png";
 import YouthBible from "../assets/apps/youth bible logo.png";
 import Noury from "../assets/websites/Nouri/noury arabic logo@4x.png";
 
@@ -30,7 +30,7 @@ export const section1Cards = [
     hrefAndroid:
       "https://play.google.com/store/apps/details?id=com.vci.ketabyelmokadas&hl=ar",
     hrefIOS:
-      "https://apps.apple.com/eg/app/%D9%83%D8%AA%D8%A7%D8%A8%D9%8A-%D8%A7%D9%84%D9%85%D9%82%D8%AF%D8%B3/id6478341868",
+      "https://apps.apple.com/us/app/%D9%83%D8%AA%D8%A7%D8%A8%D9%8A-%D8%A7%D9%84%D9%85%D9%82%D8%AF%D8%B3/id6478341868",
     logo: BibleApp,
     color: "#ffff",
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
@@ -76,9 +76,9 @@ export const section1Cards = [
     title: "Mahaba Radio",
     type: "link",
     hrefAndroid:
-      "https://play.google.com/store/apps/details?id=com.vci.ketabyelmokadas&hl=ar",
+      "https://play.google.com/store/apps/details?id=com.betterlifeteam.mahaba&hl=en",
     hrefIOS:
-      "https://apps.apple.com/eg/app/%D9%83%D8%AA%D8%A7%D8%A8%D9%8A-%D8%A7%D9%84%D9%85%D9%82%D8%AF%D8%B3/id6478341868",
+      "https://apps.apple.com/eg/app/mahaba-radio/id6450007907",
     logo: Mahaba,
     color: "#ffff",
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
@@ -88,9 +88,9 @@ export const section1Cards = [
     title: "Rannem",
     type: "link",
     hrefAndroid:
-      "https://play.google.com/store/apps/details?id=com.vci.ketabyelmokadas&hl=ar",
+      "https://play.google.com/store/apps/details?id=org.rannem.app",
     hrefIOS:
-      "https://apps.apple.com/eg/app/%D9%83%D8%AA%D8%A7%D8%A8%D9%8A-%D8%A7%D9%84%D9%85%D9%82%D8%AF%D8%B3/id6478341868",
+      "https://apps.apple.com/us/app/rannem/id6739751508?src=AppAgg.com",
     logo: Ranem,
     color: "#ffff",
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
@@ -100,9 +100,9 @@ export const section1Cards = [
     title: "Kids App",
     type: "link",
     hrefAndroid:
-      "https://play.google.com/store/apps/details?id=com.vci.ketabyelmokadas&hl=ar",
+      "https://play.google.com/store/apps/details?id=com.betterlifeteam.betterlifekids&hl=en",
     hrefIOS:
-      "https://apps.apple.com/eg/app/%D9%83%D8%AA%D8%A7%D8%A8%D9%8A-%D8%A7%D9%84%D9%85%D9%82%D8%AF%D8%B3/id6478341868",
+      "https://apps.apple.com/eg/app/better-life-kids/id1498424087",
     logo: BlKidsApp,
     color: "#ffff",
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",

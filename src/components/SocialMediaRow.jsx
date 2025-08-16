@@ -11,14 +11,14 @@ export default function SocialMediaGrid({ items }) {
     setOpenId(openId === id ? null : id);
   };
 
-  const gridItemVariants = {
-    hidden: { opacity: 0, scale: 0.8 },
-    visible: (i) => ({
-      opacity: 1,
-      scale: 1,
-      transition: { delay: i * 0.05, duration: 0.3 },
-    }),
-  };
+const gridItemVariants = {
+  hidden: { opacity: 0, scale: 0.95 },
+  visible: (i) => ({
+    opacity: 1,
+    scale: 1,
+    transition: { delay: i * 0.04, duration: 0.2, ease: "easeOut" },
+  }),
+};
 
   return (
     <div className="flex flex-col gap-4 w-full md:max-w-2xl p-4 md:ml-0">
