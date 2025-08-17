@@ -5,7 +5,7 @@ function ListenRow({ items }) {
     <div className="mt-6 px-0 pb-8">
       {/* Title */}
       <div className="text-sm font-semibold mb-4 text-gray-700 tracking-wide">
-        Streaming PLatforms
+        Streaming Platforms
       </div>
       {/* Horizontal Scroll Row */}
       <div className="flex gap-4 overflow-x-auto scrollbar-hide justify-center">
