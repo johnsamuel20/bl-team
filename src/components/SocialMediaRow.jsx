@@ -21,8 +21,8 @@ const gridItemVariants = {
 };
 
   return (
-    <div className="flex flex-col gap-4 w-full md:max-w-2xl p-4 md:ml-0">
-      <div className="text-sm font-semibold mb-4 text-gray-700 tracking-wide">
+    <div className="flex flex-col gap-4 w-full md:max-w-2xl px-2 pb-4 md:ml-0">
+      <div className="text-sm font-semibold text-gray-700 tracking-wide">
         Follow
       </div>
 
