@@ -15,9 +15,9 @@ function HeaderSection() {
 
       {/* Title + Subtitle */}
       <div>
-        <div className="text-sm md:text-lg font-semibold">Better Life Team</div>
+        <div className="text-sm md:text-lg font-bold">Better Life Ministries</div>
         <div className="text-xs md:text-sm text-gray-500">
-          Official channels & streaming
+          Official Platforms & Streaming Channels
         </div>
       </div>
 

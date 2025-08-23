@@ -1,11 +1,11 @@
 import React from "react";
 
-function ListenRow({ items }) {
+function WebPlatforms({ items }) {
   return (
     <div className="mt-6 px-0 pb-8 w-full">
       {/* Title */}
       <div className="text-sm font-bold mb-4 text-gray-700 tracking-wide">
-        Audio Streaming Platforms
+        Web Platforms
       </div>
 
       {/* Row that stretches from left to right */}
@@ -18,8 +18,11 @@ function ListenRow({ items }) {
             rel="noreferrer"
             className="group flex flex-col items-center text-sm transition-transform hover:scale-105"
           >
-            {/* Icon container */}
-            <div className="w-20 h-20 md:w-24 md:h-24 rounded-xl flex items-center justify-center border border-gray-200 bg-black shadow-sm hover:shadow-lg hover:border-blue-400 overflow-hidden transition-all duration-200">
+            {/* Icon container with dynamic background */}
+            <div
+              className="w-20 h-20 md:w-24 md:h-24 rounded-xl flex items-center justify-center border border-gray-200 shadow-sm hover:shadow-lg hover:border-blue-400 overflow-hidden transition-all duration-200"
+              style={{ backgroundColor: s.color || "#ffffff" }} // ✅ dynamic color
+            >
               <img
                 src={s.icon}
                 alt={s.title}
@@ -27,8 +30,8 @@ function ListenRow({ items }) {
               />
             </div>
 
-            {/* Label */}
-            <div className="mt-2 text-center text-gray-600 group-hover:text-blue-500 truncate w-full">
+            {/* Label (allow 2 lines) */}
+            <div className="mt-2 text-center text-gray-600 group-hover:text-blue-500 leading-tight max-w-[80px]">
               {s.title}
             </div>
           </a>
@@ -38,4 +41,4 @@ function ListenRow({ items }) {
   );
 }
 
-export default ListenRow;
+export default WebPlatforms;

@@ -17,25 +17,24 @@ export default function App() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#FFF8E7] to-white text-[#002E5D] antialiased">
+    <div className="min-h-screen bg-gradient-to-b from-[#fff4d9] to-white text-[#002E5D] antialiased">
       <div className="max-w-md md:max-w-4xl lg:max-w-6xl mx-auto px-4 md:px-8 lg:px-12 pt-6 pb-24 md:pt-10 lg:pt-16">
         <HeaderSection />
 
         <FadeInSection>
           <Section1 handleOpen={handleOpen} />
         </FadeInSection>
-
-        <FadeInSection delay={0.1}>
-          <div className="mt-6 md:mt-10">
-            <Section2 />
-          </div>
-        </FadeInSection>
-
         <FadeInSection delay={0.2}>
           <div className="mt-6 md:mt-10">
             <Section3 />
           </div>
         </FadeInSection>
+
+        {/* <FadeInSection delay={0.1}>
+          <div className="mt-6 md:mt-10">
+            <Section2 />
+          </div>
+        </FadeInSection> */}
       </div>
 
       <Modal openItem={openItem} onClose={handleClose} />
