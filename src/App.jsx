@@ -17,7 +17,7 @@ export default function App() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#febf96] to-white text-[#002E5D] antialiased">
+    <div className="min-h-screen bg-gradient-to-b from-[#ffd2b6] to-white text-[#002E5D] antialiased">
       <div className="max-w-md md:max-w-4xl lg:max-w-6xl mx-auto px-4 md:px-8 lg:px-12 pt-6 pb-24 md:pt-10 lg:pt-16">
         <HeaderSection />
 

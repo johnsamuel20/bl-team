@@ -363,14 +363,14 @@ export const musicLinks = [
     title: "Better Life",
     icon: BlLogo,
     href: "https://www.betterlifeteam.com/en/home",
-    color: "#0000"
+    color: "#ffffff"
   },
   {
     id: "mishwary",
     title: "Mishwary",
     icon: Meshwary,
     href: "https://open.spotify.com/artist/3VtbwbYtXFE00DyRtKJNUa?si=aDTLZoqrT0mvdJaJ6uP7gA",
-    color: "#0000"
+    color: "#ffffff"
   },
   {
     id: "timelessTruth",
@@ -384,6 +384,6 @@ export const musicLinks = [
     title: "Shift Descipleship",
     icon: Shift,
     href: "https://play.anghami.com/artist/1930524",
-    color: "#0000"
+    color: "#ffffff"
   },
  ]
