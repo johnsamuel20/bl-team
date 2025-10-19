@@ -42,48 +42,46 @@ export const section1Cards = [
     title: "Bible App",
     type: "link",
     hrefAndroid:
-      "https://play.google.com/store/apps/details?id=com.vci.ketabyelmokadas&hl=ar",
+      "https://play.google.com/store/apps/details?id=com.vci.ketabyelmokadas",
     hrefIOS:
-      "https://apps.apple.com/us/app/%D9%83%D8%AA%D8%A7%D8%A8%D9%8A-%D8%A7%D9%84%D9%85%D9%82%D8%AF%D8%B3/id6478341868",
+      "https://apps.apple.com/eg/app/%D9%83%D8%AA%D8%A7%D8%A8%D9%8A-%D8%A7%D9%84%D9%85%D9%82%D8%AF%D8%B3/id6478341868",
     logo: BibleApp,
     color: "#ffff",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-  }, // deep blue
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  },
   {
     id: "bible-youth",
     title: "Youth Bible",
     type: "link",
     hrefAndroid:
-      "https://play.google.com/store/apps/details?id=com.vci.ketabyelmokadas&hl=ar",
+      "https://play.google.com/store/apps/details?id=com.bl.ketabyelmokadas.youth",
     hrefIOS:
-      "https://apps.apple.com/eg/app/%D9%83%D8%AA%D8%A7%D8%A8%D9%8A-%D8%A7%D9%84%D9%85%D9%82%D8%AF%D8%B3/id6478341868",
+      "https://apps.apple.com/eg/app/%D9%83%D8%AA%D8%A7%D8%A8%D9%8A-%D8%A7%D9%84%D9%85%D9%82%D8%AF%D8%B3-%D9%84%D9%84%D8%B4%D8%A8%D8%A7%D8%A8/id6749207607",
     logo: YouthBible,
     color: "#ffff",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-  }, // soft gold
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  },
   {
     id: "noury-ai",
-    title: "Noury GPT",
+    title: "Nouri AI",
     type: "link",
-    hrefAndroid:
-      "https://play.google.com/store/apps/details?id=com.vci.ketabyelmokadas&hl=ar",
-    hrefIOS:
-      "https://apps.apple.com/eg/app/%D9%83%D8%AA%D8%A7%D8%A8%D9%8A-%D8%A7%D9%84%D9%85%D9%82%D8%AF%D8%B3/id6478341868",
+    hrefAndroid: "https://nouri.chat",
+    hrefIOS: "https://nouri.chat",
     logo: Noury,
     color: "#ffff",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-  }, // sky blue
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  },
   {
     id: "bl-radio",
-    title: "Better life\nRadio",
+    title: "Better Life\nRadio",
     type: "link",
     hrefAndroid:
       "https://play.google.com/store/apps/details?id=com.extremesolution.betterlife&hl=en",
     hrefIOS: "https://apps.apple.com/eg/app/better-life-app/id779830805",
     logo: BlRadio,
     color: "#ffff",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-  }, // teal
+    text: "Our network of five internet radio stations, each tailored to different Arabic dialects across the Middle East, offers a dynamic and engaging listening experience with 24/7 access to a wide range of content.",
+  },
   {
     id: "mahaba-radio",
     subtitle: "Partnering with",
@@ -96,17 +94,17 @@ export const section1Cards = [
     color: "#ffff",
     text: "Lorem ipsum dolor sit amet...",
   },
-
   {
     id: "rannem",
     title: "Rannem\nWorship App",
     type: "link",
-    hrefAndroid: "https://play.google.com/store/apps/details?id=org.rannem.app",
-    hrefIOS: "https://apps.apple.com/us/app/rannem/id6739751508?src=AppAgg.com",
+    hrefAndroid:
+      "https://play.google.com/store/apps/details?id=org.rannem.app&hl=en",
+    hrefIOS: "https://apps.apple.com/eg/app/rannem/id6739751508",
     logo: Ranem,
     color: "#ffff",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-  }, // playful pink
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  },
   {
     id: "kids-app",
     title: "Better life\nKids App",
@@ -116,10 +114,9 @@ export const section1Cards = [
     hrefIOS: "https://apps.apple.com/eg/app/better-life-kids/id1498424087",
     logo: BlKidsApp,
     color: "#ffff",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-  }, // playful pink
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  },
 ];
-
 // Section 2
 export const songChannels = [
   {

@@ -26,7 +26,7 @@ export default function SocialMediaGrid({ items }) {
   };
 
   return (
-    <div className="flex flex-col gap-4 w-full md:max-w-2xl px-0 pb-4 md:ml-0">
+    <div className="flex flex-col gap-4 w-full px-0 pb-4 md:ml-0">
       <div className="text-sm font-bold text-gray-700 tracking-wide">
         Social Media Platforms
       </div>
@@ -35,12 +35,16 @@ export default function SocialMediaGrid({ items }) {
         <motion.div
           key={id}
           className="bg-white rounded-xl shadow-md border border-gray-200 overflow-hidden"
-          whileTap={{ scale: 0.97 }}
+          // simple card hover: light lift + shadow
+          whileHover={{ y: -3, boxShadow: "0 10px 24px rgba(0,0,0,0.10)" }}
+          transition={{ duration: 0.2, ease: "easeOut" }}
         >
-          {/* Main Social Card */}
+          {/* Main Social Card Header */}
           <button
             onClick={() => toggleOpen(id)}
-            className="w-full flex items-center justify-between p-4"
+            className="w-full flex items-center justify-between p-4 cursor-pointer transition-all duration-200 ease-out focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500"
+            aria-expanded={openId === id}
+            aria-controls={`${id}-panel`}
           >
             <div className="flex items-center gap-3">
               <div
@@ -64,6 +68,7 @@ export default function SocialMediaGrid({ items }) {
           <AnimatePresence>
             {openId === id && (
               <motion.div
+                id={`${id}-panel`}
                 initial={{ height: 0, opacity: 0 }}
                 animate={{ height: "auto", opacity: 1 }}
                 exit={{ height: 0, opacity: 0 }}
@@ -75,18 +80,23 @@ export default function SocialMediaGrid({ items }) {
                   <div className="grid grid-cols-2 gap-4">
                     {pages.map((page, index) => {
                       const thumb = getYouTubeThumbnail(page.videoLink);
+                      const CardIcon = page.cardIcon || FaMusic;
                       return (
                         <motion.a
                           key={page.videoLink}
                           href={page.pageLink}
                           target="_blank"
                           rel="noreferrer"
-                          className="relative rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition"
+                          className="relative rounded-xl overflow-hidden shadow-lg transition-all duration-200 ease-out cursor-pointer"
                           variants={gridItemVariants}
                           initial="hidden"
                           animate="visible"
                           custom={index}
-                          whileHover={{ scale: 1.03 }}
+                          // simple hover: lift + shadow (no scale)
+                          whileHover={{
+                            y: -3,
+                            boxShadow: "0 12px 26px rgba(0,0,0,0.12)",
+                          }}
                           whileTap={{ scale: 0.97 }}
                         >
                           {/* Background Image from video link (proportional height) */}
@@ -94,15 +104,15 @@ export default function SocialMediaGrid({ items }) {
                             <img
                               src={thumb || "/fallback.jpg"}
                               alt={page.name}
-                              className="w-full h-full object-cover scale-135"
+                              className="w-full h-full object-cover"
                             />
 
                             {/* Overlay gradient */}
                             <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
 
-                            {/* Music Icon top-right */}
+                            {/* Music/Icon top-right */}
                             <div className="absolute top-2 right-2">
-                                <page.cardIcon className="text-white text-lg drop-shadow-md" />
+                              <CardIcon className="text-white text-lg drop-shadow-md" />
                             </div>
 
                             {/* Logo + Title bottom-left */}
@@ -130,12 +140,16 @@ export default function SocialMediaGrid({ items }) {
                         href={page.href}
                         target="_blank"
                         rel="noreferrer"
-                        className="flex flex-col items-center bg-white rounded-lg shadow p-2 hover:shadow-lg transition"
+                        className="flex flex-col items-center bg-white rounded-lg shadow p-2 transition-all duration-200 ease-out cursor-pointer"
                         variants={gridItemVariants}
                         initial="hidden"
                         animate="visible"
                         custom={index}
-                        whileHover={{ scale: 1.05 }}
+                        // simple hover: lift + shadow (no scale)
+                        whileHover={{
+                          y: -3,
+                          boxShadow: "0 10px 22px rgba(0,0,0,0.10)",
+                        }}
                         whileTap={{ scale: 0.95 }}
                       >
                         <img
