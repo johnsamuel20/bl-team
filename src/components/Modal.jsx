@@ -74,9 +74,9 @@ function Modal({ openItem, onClose }) {
               </button>
             </div>
 
-            <div className="p-4 border-t">
+            <div className="p-4 border-t ">
               {hasAnyLink ? (
-                <div className="flex flex-wrap gap-3">
+                <div className="flex flex-wrap justify-between gap-3">
                   {/* Google Play */}
                   {playLink && (
                     <a

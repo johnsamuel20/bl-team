@@ -26,11 +26,7 @@ export default function SocialMediaGrid({ items }) {
   };
 
   return (
-<<<<<<< HEAD
     <div className="flex flex-col gap-4 w-full ">
-=======
-    <div className="flex flex-col gap-4 w-full px-0 pb-4 md:ml-0">
->>>>>>> 186fd89ce55c60e81a033a87fdf236ded0cb07c9
       <div className="text-sm font-bold text-gray-700 tracking-wide">
         Social Media Platforms
       </div>
