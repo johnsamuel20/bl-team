@@ -36,7 +36,7 @@ const Card = React.memo(function Card({ item, onOpen, className = "" }) {
       style={{ backgroundColor: item.color }}
       onClick={() => onOpen(item)}
       aria-label={`Open ${item.title}`}
-      className={`w-full h-15 flex items-center justify-start gap-2 px-2 rounded-2xl shadow-sm overflow-hidden ${className}`}
+
     >
       <img
         src={item.logo}
