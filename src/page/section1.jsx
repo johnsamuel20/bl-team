@@ -15,10 +15,11 @@ function Section1({ handleOpen }) {
           md:grid-cols-4 
           lg:grid-cols-6
           w-full
+          
         "
       >
         {/* Row 1 */}
-        <Card item={section1Cards[0]} onOpen={handleOpen} className="col-span-2" />
+        <Card item={section1Cards[0]} onOpen={handleOpen} className="col-span-2 " />
         <Card item={section1Cards[1]} onOpen={handleOpen} className="col-span-2"/>
         <Card item={section1Cards[2]} onOpen={handleOpen} className="col-span-2"/>
 
