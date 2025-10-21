@@ -8,13 +8,13 @@ import BlDiBenty from "../assets/social media/di benty logo.png";
 import TaraneemClassic from "../assets/social media/taraneem classic.png";
 import BlClaq from "../assets/social media/rise claquette logo.png";
 
-import BibleApp from "../assets/apps/unnamed.webp";
-import BlRadio from "../assets/apps/BL Radio logo.png";
-import BlKidsApp from "../assets/apps/kids logo.png";
-import Mahaba from "../assets/apps/mahaba logo.png";
-import Ranem from "../assets/apps/ranem black@4x-8.png";
-import YouthBible from "../assets/apps/unnamed (1).webp";
-import Noury from "../assets/websites/Nouri/nouri final icon.png";
+// import BibleApp from "../assets/apps/unnamed.webp";
+// import BlRadio from "../assets/apps/BL Radio logo.webp";
+// import BlKidsApp from "../assets/apps/kids logo.webp";
+// import Mahaba from "../assets/apps/mahaba logo.webp";
+// import Ranem from "../assets/apps/ranem black@4x-8.webp";
+// import YouthBible from "../assets/apps/unnamed (1).webp";
+import Noury from "../assets/websites/Nouri/nouri final icon-min.png";
 import Meshwary from "../assets/websites/meshwary-min.PNG";
 import TimelessTruth from "../assets/websites/timeless truth/timeless truth whiite500-min.png";
 import Shift from "../assets/Shift logos/Asset 51@4x-min.png";
@@ -30,10 +30,10 @@ import {
   FaMicrophone,
 } from "react-icons/fa";
 
-import AppleMusic from "../assets/SM-Music Icons/My project.png";
+import AppleMusic from "../assets/SM-Music Icons/My project.webp";
 import Spotify from "../assets/SM-Music Icons/Spotify_logo_without_text.svg.webp";
-import Anghami from "../assets/SM-Music Icons/Anghami_Icon.png";
-import SoundCloud from "../assets/SM-Music Icons/images.png";
+import Anghami from "../assets/SM-Music Icons/Anghami_Icon.webp";
+import SoundCloud from "../assets/SM-Music Icons/images.webp";
 
 // Section 1
 export const section1Cards = [
@@ -42,10 +42,10 @@ export const section1Cards = [
     title: "Bible App",
     type: "link",
     hrefAndroid:
-      "https://play.google.com/store/apps/details?id=com.vci.ketabyelmokadas&hl=ar",
+      "https://play.google.com/store/apps/details?id=com.vci.ketabyelmokadas",
     hrefIOS:
-      "https://apps.apple.com/us/app/%D9%83%D8%AA%D8%A7%D8%A8%D9%8A-%D8%A7%D9%84%D9%85%D9%82%D8%AF%D8%B3/id6478341868",
-    logo: BibleApp,
+      "https://apps.apple.com/eg/app/%D9%83%D8%AA%D8%A7%D8%A8%D9%8A-%D8%A7%D9%84%D9%85%D9%82%D8%AF%D8%B3/id6478341868",
+    logo: "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/0a/41/ac/0a41ac26-9364-4c22-6fdf-d91bc5ecedcc/AppIcon-1x_U007emarketing-0-11-0-85-220-0.png/230x0w.webp",
     color: "#ffff",
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
   }, // deep blue
@@ -54,10 +54,10 @@ export const section1Cards = [
     title: "Youth Bible",
     type: "link",
     hrefAndroid:
-      "https://play.google.com/store/apps/details?id=com.vci.ketabyelmokadas&hl=ar",
+      "https://play.google.com/store/apps/details?id=com.bl.ketabyelmokadas.youth",
     hrefIOS:
-      "https://apps.apple.com/eg/app/%D9%83%D8%AA%D8%A7%D8%A8%D9%8A-%D8%A7%D9%84%D9%85%D9%82%D8%AF%D8%B3/id6478341868",
-    logo: YouthBible,
+      "https://apps.apple.com/eg/app/%D9%83%D8%AA%D8%A7%D8%A8%D9%8A-%D8%A7%D9%84%D9%85%D9%82%D8%AF%D8%B3-%D9%84%D9%84%D8%B4%D8%A8%D8%A7%D8%A8/id6749207607",
+    logo: "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/ad/c6/8e/adc68e7e-1d14-396f-dd84-6274dda704bf/AppIcon-1x_U007emarketing-0-11-0-0-85-220-0.png/492x0w.webp",
     color: "#ffff",
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
   }, // soft gold
@@ -66,9 +66,9 @@ export const section1Cards = [
     title: "Noury GPT",
     type: "link",
     hrefAndroid:
-      "https://play.google.com/store/apps/details?id=com.vci.ketabyelmokadas&hl=ar",
+      "https://nouri.chat",
     hrefIOS:
-      "https://apps.apple.com/eg/app/%D9%83%D8%AA%D8%A7%D8%A8%D9%8A-%D8%A7%D9%84%D9%85%D9%82%D8%AF%D8%B3/id6478341868",
+      "https://nouri.chat",
     logo: Noury,
     color: "#ffff",
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
@@ -80,7 +80,7 @@ export const section1Cards = [
     hrefAndroid:
       "https://play.google.com/store/apps/details?id=com.extremesolution.betterlife&hl=en",
     hrefIOS: "https://apps.apple.com/eg/app/better-life-app/id779830805",
-    logo: BlRadio,
+    logo: "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/61/e7/d3/61e7d3ce-3485-95d5-5746-e0469beb458f/AppIcon-0-0-1x_U007epad-0-10-0-0-85-220.png/492x0w.webp",
     color: "#ffff",
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
   }, // teal
@@ -91,8 +91,8 @@ export const section1Cards = [
     type: "link",
     hrefAndroid:
       "https://play.google.com/store/apps/details?id=com.betterlifeteam.mahaba&hl=en",
-    hrefIOS: "https://apps.apple.com/eg/app/mahaba-radio/id6450007907",
-    logo: Mahaba,
+    hrefIOS: " https://apps.apple.com/eg/app/mahaba-radio/id6450007907",
+    logo: "https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/3c/8b/b2/3c8bb281-5cf1-3e94-c207-811b7cfb52a8/AppIcon-0-0-1x_U007epad-0-10-0-0-85-220.png/492x0w.webp",
     color: "#ffff",
     text: "Lorem ipsum dolor sit amet...",
   },
@@ -101,9 +101,9 @@ export const section1Cards = [
     id: "rannem",
     title: "Rannem\nWorship App",
     type: "link",
-    hrefAndroid: "https://play.google.com/store/apps/details?id=org.rannem.app",
-    hrefIOS: "https://apps.apple.com/us/app/rannem/id6739751508?src=AppAgg.com",
-    logo: Ranem,
+    hrefAndroid: "https://play.google.com/store/apps/details?id=org.rannem.app&hl=en",
+    hrefIOS: "https://apps.apple.com/eg/app/rannem/id6739751508  ",
+    logo: "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/65/68/0f/65680fa5-1630-e432-8947-ed52958a03fd/AppIcon-0-1x_U007emarketing-0-11-0-85-220-0.png/492x0w.webp",
     color: "#ffff",
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
   }, // playful pink
@@ -114,7 +114,7 @@ export const section1Cards = [
     hrefAndroid:
       "https://play.google.com/store/apps/details?id=com.betterlifeteam.betterlifekids&hl=en",
     hrefIOS: "https://apps.apple.com/eg/app/better-life-kids/id1498424087",
-    logo: BlKidsApp,
+    logo: "https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/61/6c/c2/616cc27f-d7fb-f3c2-5bc1-9e485e299933/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/492x0w.webp",
     color: "#ffff",
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
   }, // playful pink
@@ -334,7 +334,7 @@ export const socialLinks = [
 export const musicLinks = [
   {
     id: "soundcloud",
-    title: "Sound Cloud",
+    title: "SoundCloud",
     icon: SoundCloud,
     href: "https://soundcloud.com/better-life-733580510",
   },
